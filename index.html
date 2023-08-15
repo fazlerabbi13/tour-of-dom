@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        li{
+            color:blueviolet
+        }
+        #frits-container{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>welcome to dom</h1>
+        <p>Lorem ipsum dolor sit amet,
+             consectetur adipisicing elit. 
+             Assumenda deserunt beatae suscipit
+              repellendus delectus voluptate
+               laborum earum culpa blanditiis
+                totam necessitatibus, possimus
+                 doloribus dolore velit. Quaera
+                 t possimus 
+            perspiciatis natus tempora.</p>
+    </header>
+    <main>
+        <section>
+            <h1>welcome to dom</h1>
+        <ul>
+            <li>atif</li>
+            <li>arijit</li>
+            <li>tahsan</li>
+        </ul>
+        </section>
+        <section>
+            <h1>welcome to dom</h1>
+        <ul>
+            <li>bandorban</li>
+            <li>shalbn</li>
+            <li>katabon</li>
+        </ul>
+        </section>
+        <section id="frit-container">
+            <h1 id="frits-container">fruits</h1>
+        <ul>
+            <li>apple</li>
+            <li>orange</li>
+            <li>mango</li>
+        </ul>
+        </section>
+    </main>
+<script src="js/dom.js"></script>
+<script src="newstylejjs/new.js"></script>
+<script>
+    // console.log("javascript link can be add two ways")
+    // const student = {
+    //     name:"sagor",
+    //     id:12,
+    //     study: function(time){
+    //         console.log(time ,"study start")
+    //     }
+    // }
+    const liCollection = document.getElementsByTagName('li');
+    // console.log(liCollection);
+    for(const li of liCollection ){
+        console.log(li.innerText);
+    }
+    const fruits = document.getElementById('frits-container')
+    // fruits.innerText ='fruits name change';
+    const someLi =document.querySelectorAll("#frit-container li");
+    for(const li of someLi){
+        console.log(li.innerText);
+    }
+</script>
+</body>
+</html>
